@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./cohesionFund.css">
+
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Ashesi Student Council</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body>
+    <!-- header -->
+    <header class="header-area">
+        <div class="container">
+            <div class="row d_flex">
+                <div class="col-sm-3 logo_sm">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-9">
+                        <div class="navbar-area">
+                            <nav class="site-navbar">
+                                <ul>
+                                    <li><a class="active" href="home.php">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="action.html">Announements</a></li>
+                                    <li><a href="distcenters.php">Committees</a></li>
+                                    <li><a href="./program.php">Events</a></li>
+                                </ul>
+                                <button class="nav-toggler">
+                                    <span></span>
+                                </button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="center">
+        <h2>Apply for The Campus Cohesion Fund</h2>
+    </div>
+    <div class="area">
+        <form name="leoForm" class="form-container form-row needs-validation" action="./cohesionFund.php" method="POST"
+            id="form">
+            <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" id="fname" name="first" placeholder="first name" required>
+                <div class="invalid-feedback">fill this side</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" id="lname" name="last" placeholder="last name" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Gender</label>
+                <select class="form-control" name="gender" id="exampleFormControlSelect1" required>
+                    <option value="">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group col-md-9">
+                <label>Email address</label>
+                <input type="email" class="form-control" name="mail" id="emailinput" aria-describedby="emailHelp"
+                    placeholder="eg. oliver.sampah@ashesi.edu.gh">
+                <span id="text"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Phone number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="eg.0224442455" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Year Group</label>
+                <select class="form-control" name="year" id="exampleFormControlSelect1" required>
+                    <option value="">Year Group</option>
+                    <option value="2021">2022</option>
+                    <option value="2022">2023</option>
+                    <option value="2023">2024</option>
+                    <option value="2024">2025</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Course</label>
+                <select class="form-control" name="course" id="exampleFormControlSelect1" required>
+                    <option value="">Course</option>
+                    <option value="CS">CS</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="ME">ME</option>
+                    <option value="EE">EE</option>
+                    <option value="MIS">MIS</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Project Name</label>
+                <input type="text" class="form-control" id="pname" name="pname" placeholder="project name" required>
+            </div>
+            <div class="form-group col-md-9">
+                <label>Project Description</label>
+                <input type="text" class="form-control" name="desc" placeholder="Add description of project" required>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block" name="submit" onclick="validation()">Submit</button>
+        </form>
+    </div>
+    </div>
+    <!--  footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="hedingh3 text_align_left">
+                            <h3>Resources</h3>
+                            <ul class="menu_footer">
+                                <li><a href="home.php">Home</a>
+                                <li>
+                                <li><a href="javascript:void(0)">What we do</a>
+                                <li>
+                                <li> <a href="javascript:void(0)">Media</a>
+                                <li>
+                                <li> <a href="javascript:void(0)">Travel Advice</a>
+                                <li>
+                                <li><a href="javascript:void(0)">Protection</a>
+                                <li>
+                                <li><a href="javascript:void(0)">Care</a>
+                                <li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="hedingh3 text_align_left">
+                            <h3>About</h3>
+                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                                default model
+                                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                                Various
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="hedingh3  text_align_left">
+                            <h3>Contact Us</h3>
+                            <ul class="top_infomation">
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    Berekuso
+                                </li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>
+                                    Call : +233 1234567890
+                                </li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <a href="Javascript:void(0)">Email : techtroopers@gmail.com</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="hedingh3 text_align_left">
+                            <h3>countries</h3>
+                            <div class="map">
+                                <img src="images/map.png" alt="#" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script type="text/javascript">
+
+        function validation() {
+            var form = document.getElementById("form");
+            var email = document.getElementById("emailinput").value;
+            var text = document.getElementById("text");
+            var pattern = /^[a-z\.-]+@ashesi.edu.gh$/gi;
+
+            if (email.match(pattern)) {
+                emailinput.setCustomValidity("");
+            }
+            else {
+                emailinput.setCustomValidity("Enter a valid ashesi email");
+            }
+        }
+    </script>
+</body>
+
+</html>
